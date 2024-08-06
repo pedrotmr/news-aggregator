@@ -38,7 +38,7 @@ const NEWS_API_CATEGORIES = [
 ];
 
 export const useGetCategories = () => {
-  const { data: theGuardianCategories = [], isLoading } = useQuery(['guardian-categories'], () =>
+  const { data: theGuardianCategories = [] } = useQuery(['guardian-categories'], () =>
     theGuardianApi.fetchAndCacheCategories(),
   );
 

@@ -7,9 +7,7 @@ const SOURCES = [
 ];
 
 export const useGetSources = () => {
-  const { data: newsApiSources = [], isLoading } = useQuery(['news-api-sources'], () =>
-    newsApi.fetchAndCacheSources(),
-  );
+  const { data: newsApiSources = [] } = useQuery(['news-api-sources'], () => newsApi.fetchAndCacheSources());
 
   const allSources = [...newsApiSources, ...SOURCES];
   allSources.sort((a, b) => a.name.localeCompare(b.name));
