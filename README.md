@@ -28,6 +28,7 @@ To get started with the application, follow these steps:
 
    ```bash
    git clone https://github.com/pedrotmr/news-aggregator.git
+   
    cd news-aggregator
    ```
 
