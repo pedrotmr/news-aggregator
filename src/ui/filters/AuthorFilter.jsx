@@ -6,7 +6,7 @@ const AuthorFilter = ({ articles }) => {
     if (!articles) return [];
     const uniqueAuthors = new Set();
     articles.forEach((article) => {
-      if (article.author) uniqueAuthors.add(article.author);
+      if (article?.author) uniqueAuthors.add(article.author);
     });
     return Array.from(uniqueAuthors).sort();
   }, [articles]);
